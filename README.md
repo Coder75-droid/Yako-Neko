@@ -1,22 +1,38 @@
-Copyright (c) 2026 [Zia Rizandeen]. All rights reserved.
+# Yako-Neko
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files, to view, run, and test 
-the software for personal, non-commercial educational or evaluation purposes only.
+A desktop screen pet that helps you stop procrastinating. It flys across your screen and forces you to stay focused by automatically closing blacklisted social media sites and game apps. 
 
-This permission is subject to the following conditions:
+## How to run it locally
 
-1. NO MODIFICATIONS: You may not modify, adapt, alter, or create derivative 
-   works based upon the software.
-2. NO REDISTRIBUTION: You may not distribute, sub-license, rent, lease, or 
-   sell the software or any modified versions of it to any third party.
-3. COPYRIGHT NOTICE: The above copyright notice and this permission notice 
-   shall be included in all copies or substantial portions of the Software.
+### What you need
+* Node.js installed on your computer
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+### Setup steps
+1. **Download the project files:**
+   ```bash
+   git clone https://github.com
+   ```
+2. **Open the project folder in your terminal:**
+   ```bash
+   cd Yako-Neko
+   ```
+3. **Install the packages:** (This builds your node_modules folder)
+   ```bash
+   npm install
+   ```
+4. **Run the app:**
+   ```bash
+   npm start
+   ```
+
+## Features
+* **Desktop Motion:** Pet moves all over your screen while you work.
+* **Custom Skins:** Swap out different animation sheets to change how the pet looks.
+* **Website Blacklist:** Track browser targets to close distracting social media sites instantly.
+* **App Blacklist:** Kill running program targets to shut down background games you shouldn't be playing.
+
+## License
+
+**Copyright © 2026 Zia Rizandeen. All rights reserved.**
+
+This project does not have an open-source license. Feel free to look at the code, download it, and test it out for yourself. However, you do not have permission to modify the code, reuse the assets/skins, or re-upload/redistribute this project anywhere else without asking me first.

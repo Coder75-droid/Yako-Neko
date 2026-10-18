@@ -1,0 +1,40 @@
+{
+  "name": "yako-neko",
+  "version": "1.2.0",
+  "description": "Yako Neko — Your focus nyan companion",
+  "author": "Zia Rizandeen",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:folder": "electron-builder --dir",
+    "dist:portable": "electron-builder --win portable",
+    "dist:zip": "electron-builder --win zip"
+  },
+  "build": {
+    "appId": "com.yako.neko",
+    "productName": "Yako Neko",
+    "asar": true,
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/app_icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Yako Neko",
+      "deleteAppDataOnUninstall": false
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^26.15.3"
+  }
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yako Neko v1.0.0</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body data-theme="dark">
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1 1.2z"/><path d="M19 15l.7 2.1L22 18l-2.3.9L19 21l-.7-2.1L16 18l2.3-.9z"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".9"/><circle cx="17.5" cy="10.5" r=".9"/><circle cx="8.5" cy="7.5" r=".9"/><circle cx="6.5" cy="12.5" r=".9"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.84-.44-1.13-.29-.29-.44-.65-.44-1.12a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.55-2.5 5.55-5.55C21.97 6.01 17.46 2 12 2z"/></symbol>
+    <symbol id="i-type" viewBox="0 0 24 24"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-wand" viewBox="0 0 24 24"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72Z"/><path d="M14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9c-2.5 0-4.9 1-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+    <symbol id="i-power" viewBox="0 0 24 24"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" x2="12" y1="2" y2="12"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><polyline points="21 3 21 9 15 9"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><line x1="10" x2="10" y1="4" y2="20"/><line x1="14" x2="14" y1="4" y2="20"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="17" cy="9" r="2.5"/><path d="M21 21v-1.5a3 3 0 0 0-2-2.8"/></symbol>
+  </svg>
+
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-row">
+        <div class="brand-mark"><svg class="ic"><use href="#i-sparkles"/></svg></div>
+        <div>
+          <p class="eyebrow">YAKO NEKO</p>
+          <h1>Settings</h1>
+        </div>
+      </div>
+      <div class="some-row-class">
+        <span>Launch on startup</span>
+        <button id="startup-toggle" class="toggle" type="button">
+          <span class="checkbox"></span>
+        </button>
+      </div>
+      <nav class="nav-list" aria-label="Settings sections">
+        <p class="nav-label">Workspace</p>
+        <button class="nav-item active" data-page="focus" data-label="Filters">
+          <svg class="ic"><use href="#i-gauge"/></svg>Filters<span class="nav-dot"></span>
+        </button>
+        <button class="nav-item" data-page="cat" data-label="Customizations">
+          <svg class="ic"><use href="#i-palette"/></svg>Customizations
+        </button>
+        <button class="nav-item" data-page="credits" data-label="Credits">
+          <svg class="ic"><use href="#i-info"/></svg>Credits
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="status-line"><span class="online-dot"></span> GET TO WORK</div>
+      </div>
+    </aside>
+
+    <section class="content-area">
+      <header class="topbar">
+        <div>
+          <h1 class="topbar-title" id="breadcrumb-current">Filters</h1>
+        </div>
+        <div class="top-actions">
+          <button class="icon-button" id="pause-toggle" aria-label="Pause the cat">
+            <svg class="ic only-running"><use href="#i-pause"/></svg>
+            <svg class="ic only-paused"><use href="#i-play"/></svg>
+          </button>
+          <button class="icon-button" id="quit-button" aria-label="Quit yako neko">
+            <svg class="ic"><use href="#i-power"/></svg>
+          </button>
+          <button class="icon-button" id="restart-button" aria-label="Restart yako neko">
+            <svg class="ic"><use href="#i-refresh"/></svg>
+          </button>
+          <button class="icon-button" id="theme-toggle" aria-label="Toggle theme">
+            <svg class="ic only-dark"><use href="#i-sun"/></svg>
+            <svg class="ic only-light"><use href="#i-moon"/></svg>
+          </button>
+          <button class="save-button" id="save-button">
+            <svg class="ic ic-save"><use href="#i-save"/></svg>
+            <svg class="ic ic-check"><use href="#i-check"/></svg>
+            <span id="save-label">Save</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="content-scroll">
+
+        <div class="page active" id="page-focus">
+          <div class="hero-card">
+            <div class="np-stage" id="np-stage">
+              <canvas id="np-fx"></canvas>
+              <div class="np-flyer">
+                <div class="np-catwrap">
+                  <div class="np-name" id="np-name">Cat</div>
+                  <div class="np-cat" id="np-cat"></div>
+                </div>
+              </div>
+              <div class="live-tag hero-live"><span></span>LIVE PREVIEW</div>
+              <div class="hero-grid"></div>
+            </div>
+          </div>
+
+          <section class="settings-section">
+            <div class="section-heading">
+              <div>
+                <h2>Blacklisted sites</h2>
+              </div>
+              <span class="section-count" id="site-count">00</span>
+            </div>
+            <div class="item-list" id="site-list"></div>
+            <div class="add-row">
+              <input id="new-site" type="text" placeholder="add a website" aria-label="add a website">
+              <button class="add-button" id="add-site"><svg class="ic"><use href="#i-plus"/></svg> Add</button>
+            </div>
+          </section>
+
+          <section class="settings-section">
+            <div class="section-heading">
+              <div>
+                <h2>Blacklisted games</h2>
+              </div>
+              <span class="section-count" id="game-count">00</span>
+            </div>
+            <div class="item-list" id="game-list"></div>
+            <div class="add-row">
+              <input id="new-game" type="text" placeholder="add a game name" aria-label="add a game name">
+              <button class="add-button" id="add-game"><svg class="ic"><use href="#i-plus"/></svg> Add</button>
+            </div>
+          </section>
+
+          <section class="settings-section">
+            <div class="section-heading">
+              <div>
+                <h2>Safe apps</h2>
+                <p>Let these through so your essential tools work uninterrupted.</p>
+              </div>
+              <span class="section-count" id="safe-count">00</span>
+            </div>
+            <div class="item-list" id="safe-list"></div>
+            <div class="add-row">
+              <input id="new-safe" type="text" placeholder="add a process name" aria-label="add a process name">
+              <button class="add-button" id="add-safe"><svg class="ic"><use href="#i-plus"/></svg> Add</button>
+            </div>
+          </section>
+        </div>
+
+        <div class="page" id="page-cat">
+          <section class="settings-section skins-section">
+            <div class="section-heading">
+              <div>
+                <h2>Skins</h2>
+                <p>Choose your nyan</p>
+              </div>
+            </div>
+            <div class="skin-grid" id="skin-grid"></div>
+          </section>
+          <section class="settings-section customize-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow coral">Customize your cat</p>
+              </div>
+              <svg class="ic wand-icon" style="width:22px;height:22px"><use href="#i-wand"/></svg>
+            </div>
+            <div class="control-grid">
+              <label class="slider-control"><span>Size <strong id="cat-scale-val">100%</strong></span><input type="range" id="cat-scale" min="50" max="200" value="100"></label>
+              <label class="slider-control"><span>Trail depth <strong id="trail-depth-val">11</strong></span><input type="range" id="trail-depth" min="0" max="40" value="11"></label>
+              <label class="slider-control"><span>Flight speed <strong id="cat-speed-val">100%</strong></span><input type="range" id="cat-speed" min="20" max="300" value="100"></label>
+            </div>
+            <div class="toggle-options">
+              <button class="check-option" id="trail-toggle"><span class="checkbox"></span><b>Trail</b></button>
+              <button class="check-option" id="particles-toggle"><span class="checkbox"></span><b>Particles</b></button>
+            </div>
+            <div class="section-heading" style="margin-top: 30px;">
+              <div>
+                <h2>Rename your cat</h2>
+              </div>
+            </div>
+            <div class="add-row">
+              <input id="pet-name" maxlength="140" placeholder="Name your cat" />
+            </div>
+            <div class="np-controls" style="grid-template-columns: repeat(2, 1fr); margin-top: 18px;">
+              <label class="np-field">
+                <span>Nameplate text</span>
+                <input type="color" class="color-input" id="np-text" value="#ffffff">
+              </label>
+              <label class="np-field">
+                <span>Nameplate outline</span>
+                <input type="color" class="color-input" id="np-outline" value="#000000">
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <div class="page" id="page-credits">
+          <section class="settings-section">
+            <div class="section-heading">
+              <div>
+                <h2>Credits</h2>
+              </div>
+            </div>
+            <div class="credits-note">
+              <p>Original Nyan Cat sprite — Chris Torres (@PRguitarman)</p>
+              <p>https://www.nyan.cat/index.php?cat=original</p>
+              <p>Rainbow trail &amp; particles — inspired by Rafe-Lin's Nyan Cat Desktop Pet</p>
+              <p>https://github.com/Rafe-Lin/nyancat_deskpet</p>
+              <p>Rainbow / particle effects independently implemented in JavaScript.</p>
+              <p>Fonts — Press Start 2P &amp; VT323 (Google Fonts, OFL)</p>
+              <p>Built with Electron</p>
+            </div>
+          </section>
+        </div>
+          <button id="reset-button"><svg class="ic sm"><use href="#i-rotate"/></svg> Reset to defaults</button>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+<script src="skins.js"></script>
+<script src="settings.js"></script>
+<script src="preview-fx.js"></script>
+</body>
+</html>

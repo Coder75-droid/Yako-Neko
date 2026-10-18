@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Yako Neko — Login</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+  :root { --bg:#0d1220; --panel:#151b2e; --line:#2b3350; --text:#e8ecff; --dim:#8b93b8; --accent:#39e6a3; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html,body { height:100%; }
+  body {
+    background:var(--bg); color:var(--text);
+    font-family:'VT323', monospace;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+  body::before {
+    content:''; position:fixed; top:0; left:0; right:0; height:6px;
+    background:linear-gradient(90deg,#ff0000,#ffa500,#ffff00,#32cd32,#00bfff,#9400d3);
+  }
+  .card {
+    width:420px; background:var(--panel); border:3px solid var(--line);
+    padding:34px 30px 30px; text-align:center;
+    box-shadow:0 0 0 3px #000, 0 18px 40px rgba(0,0,0,.5);
+  }
+  .logo { font-family:'Press Start 2P'; font-size:20px; letter-spacing:2px; }
+  .logo .a { color:#ff5566; } .logo .b { color:#39e6a3; }
+  .sub { color:var(--dim); font-size:19px; margin-top:10px; }
+  label { display:block; text-align:left; color:var(--dim); font-size:18px; margin:26px 0 6px; }
+  input {
+    width:100%; background:#0d1220; border:3px solid var(--line); color:var(--text);
+    font-family:'VT323', monospace; font-size:24px; padding:8px 10px; outline:none;
+  }
+  input:focus { border-color:var(--accent); }
+  button {
+    margin-top:24px; width:100%; cursor:pointer;
+    font-family:'Press Start 2P'; font-size:13px; letter-spacing:1px;
+    color:#20180a; background:linear-gradient(180deg,#ffd76a,#ff9d3c);
+    border:3px solid #000; padding:12px 0;
+  }
+  button:hover { filter:brightness(1.08); }
+  .hint { color:var(--dim); font-size:16px; margin-top:14px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo"><span class="a">YAKO</span> <span class="b">NEKO</span></div>
+    <div class="sub">choose your cat's name</div>
+    <label for="user-name">Username</label>
+    <input id="user-name" maxlength="24" placeholder="" autocomplete="off" />
+    <button id="enter-btn">ENTER</button>
+    <div class="hint">Multiplayer may not work</div>
+  </div>
+<script>
+  const input = document.getElementById('user-name');
+  const btn = document.getElementById('enter-btn');
+    function submit() {
+    const name = (input.value || '').trim();
+    window.api.saveConfig({ name });
+    window.api.loginDone();
+  }
+  btn.addEventListener('click', submit);
+  input.addEventListener('keydown', (e) => { if (e.key === 'Enter') submit(); });
+  try {
+    window.api.onLoginPrefill((name) => {
+      if (name) {
+        input.value = name;
+        input.select();
+      } else {
+        input.focus();
+      }
+    });
+  } catch (error) {
+    input.focus();
+  }
+</script>
+</body>
+</html>

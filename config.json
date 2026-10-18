@@ -1,0 +1,34 @@
+{
+  "name": "GATO",
+  "sites": [
+    "instagram",
+    "youtube",
+    "tiktok",
+    "twitter",
+    "reddit",
+    "facebook"
+  ],
+  "games": [
+    "roblox",
+    "steam",
+    "minecraft",
+    "epicgameslauncher",
+    "valorant"
+  ],
+  "safeApps": [],
+  "cat": {
+    "scale": 50,
+    "density": 55,
+    "trailDepth": 20,
+    "trailEnabled": true,
+    "speed": 100,
+    "skin": "dj"
+  },
+  "nameplate": {
+    "text": "#ffffff",
+    "outline": "#000000",
+    "font": "sevenPlus",
+    "padTop": 0.25
+  },
+  "startup": false
+}

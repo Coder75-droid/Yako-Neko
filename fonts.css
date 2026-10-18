@@ -1,0 +1,16 @@
+/* Local pixel fonts: no network required, ever. */
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('assets/fonts/PressStart2P.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VT323';
+    src: url('assets/fonts/VT323.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
